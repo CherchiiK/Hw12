@@ -1,13 +1,13 @@
 package part1;
 
-public class Employee implements Comparable<Employee>{
+public class Employee implements Comparable<Employee> {
     private int id;
     private String firstName;
     private String lastname;
     private double salary;
     static int counter = 1;
 
-    public Employee(){
+    public Employee() {
     }
 
     public Employee(String firstName, String lastname, double salary) {
@@ -49,7 +49,7 @@ public class Employee implements Comparable<Employee>{
         this.lastname = lastname;
     }
 
-    public double getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
@@ -59,17 +59,14 @@ public class Employee implements Comparable<Employee>{
 
     @Override
     public int compareTo(Employee o) {
-        if (this.getId() == o.getId()){
+        if (this.getId() == o.getId()) {
             return 0;
-        } else if (this.getId() < o.getId()){
+        } else if (this.getId() < o.getId()) {
             return -1;
-        }
-        else {
-            return 1;
-        }
+        } else return 1;
     }
 
-    public String toString(){
+    public String toString() {
         return "Id: " + getId() + "\n" +
                 "Name: " + getFirstName() + " " + getLastname() + "\n"
                 + "Salary: " + getSalary() + "\n";
