@@ -2,7 +2,7 @@ package part1;
 
 import java.util.Comparator;
 
-public class Comparatorr implements Comparator<Employee> {
+public class CompareForSalaryAndName implements Comparator<Employee> {
 
     public int compare(Employee o1, Employee o2) {
         if (o1.getSalary().equals(o2.getSalary())) {
